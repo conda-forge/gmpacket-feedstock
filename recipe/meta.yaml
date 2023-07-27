@@ -27,7 +27,9 @@ requirements:
     - python >=3.6,<=3.11
     - geopy >=2.1.0
     - pandas >=1.4.0
-    - pydantic >=1.10.0
+    - pydantic >=2.0
+    # this is probably wrong, I'll check upstream why it was added
+    - setuptools-scm >=6.3.2
 
 test:
   imports:
