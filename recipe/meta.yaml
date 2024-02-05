@@ -1,5 +1,5 @@
 {% set name = "gmpacket" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gmpacket-{{ version }}.tar.gz
-  sha256: 45f6807afb54b4ea530ddbd00e6b071cee5eb6abb77f20d710048d5976295aee
+  sha256: 749b83b82425a1bf8f0d9c49ee1d5e2061d6d0a5c1b08651f6e89fa9b796734a
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.6,<=3.11
+    - python >=3.8
     - setuptools >=42
     - wheel
     - setuptools-scm >=3.4
@@ -24,7 +24,7 @@ requirements:
     - numpy
     - pip
   run:
-    - python >=3.6,<=3.11
+    - python >=3.8
     - geopy >=2.1.0
     - pandas >=1.4.0
     - pydantic >=2.0
