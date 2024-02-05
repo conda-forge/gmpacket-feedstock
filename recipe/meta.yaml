@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.6,<=3.11
+    - python >=3.8
     - setuptools >=42
     - wheel
     - setuptools-scm >=3.4
@@ -24,7 +24,7 @@ requirements:
     - numpy
     - pip
   run:
-    - python >=3.6,<=3.11
+    - python >=3.8
     - geopy >=2.1.0
     - pandas >=1.4.0
     - pydantic >=2.0
