@@ -6,17 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gmpacket-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gmpacket-{{ version }}.tar.gz
   sha256: 749b83b82425a1bf8f0d9c49ee1d5e2061d6d0a5c1b08651f6e89fa9b796734a
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=42
     - wheel
     - setuptools-scm >=3.4
@@ -24,7 +24,7 @@ requirements:
     - numpy
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - geopy >=2.1.0
     - pandas >=1.4.0
     - pydantic >=2.0
@@ -38,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/SCEDC/ground-motion-packet
