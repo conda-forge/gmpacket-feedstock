@@ -1,5 +1,5 @@
 {% set name = "gmpacket" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gmpacket-{{ version }}.tar.gz
-  sha256: 749b83b82425a1bf8f0d9c49ee1d5e2061d6d0a5c1b08651f6e89fa9b796734a
+  sha256: ec7b95a980a47059a3da6436011c78f0cacc25a5c6974e7fa517d1709fae21bb
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
