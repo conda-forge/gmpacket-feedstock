@@ -3,7 +3,7 @@ About gmpacket-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gmpacket-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/SCEDC/ground-motion-packet
+Home: https://pypi.org/project/gmpacket/
 
 Package license: Unicode-DFS-2016
 
